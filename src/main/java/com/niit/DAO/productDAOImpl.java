@@ -40,7 +40,7 @@ import com.niit.model.product;
 		public boolean deleteproduct(int prodId) {
 		try{
 			product p=getOneproduct(prodId);
-			sessionfactory.getCurrentSession().delete(prodId);
+			sessionfactory.getCurrentSession().delete(p);
 			return true;
 		}
 		

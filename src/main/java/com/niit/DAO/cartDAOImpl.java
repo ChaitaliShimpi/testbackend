@@ -31,7 +31,7 @@ public class cartDAOImpl implements cartDAO {
 	public boolean deleteCart(int cartId) {
 		try {
 			cart ca = getOnecartitem(cartId);
-			sessionfactory.getCurrentSession().delete(cartId);
+			sessionfactory.getCurrentSession().delete(ca);
 			return true;
 		} catch (Exception e) {
 			System.out.println("exception expired" + e);
