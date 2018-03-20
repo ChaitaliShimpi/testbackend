@@ -43,12 +43,12 @@ public class DBConfig {
 		hibernateProp.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 
 		LocalSessionFactoryBuilder factoryBuilder = new LocalSessionFactoryBuilder(getH2DataSource());
-		factoryBuilder.addAnnotatedClass(category.class);
-		factoryBuilder.addAnnotatedClass(product.class);
-		factoryBuilder.addAnnotatedClass(supplier.class);
+		factoryBuilder.addAnnotatedClass(Category.class);
+		factoryBuilder.addAnnotatedClass(Product.class);
+		factoryBuilder.addAnnotatedClass(Supplier.class);
 		factoryBuilder.addAnnotatedClass(User.class);
-		factoryBuilder.addAnnotatedClass(cart.class);
-		factoryBuilder.addAnnotatedClass(order.class);
+		factoryBuilder.addAnnotatedClass(Cart.class);
+		factoryBuilder.addAnnotatedClass(Order.class);
 
 
 		factoryBuilder.addProperties(hibernateProp);
@@ -58,39 +58,39 @@ public class DBConfig {
 	}
 
 	@Bean(name = "categoryDAO")
-	public categoryDAO getCategoryDAO() {
+	public CategoryDAO getCategoryDAO() {
 		System.out.println("----categoryDAO Implementation---");
-		return new categoryDAOImpl();
+		return new CategoryDAOImpl();
 	}
 
 	@Bean(name = "productDAO")
-	public productDAO getProductDAO() {
+	public ProductDAO getProductDAO() {
 		System.out.println("----productDAO Implementation---");
-		return new productDAOImpl();
+		return new ProductDAOImpl();
 	}
 
 	@Bean(name = "supplierDAO")
-	public supplierDAO getsupplierDAO() {
+	public SupplierDAO getsupplierDAO() {
 		System.out.println("----supplierDAO Implementation---");
-		return new supplierDAOImpl();
+		return new SupplierDAOImpl();
 	}
 
 	@Bean(name = "userDAO")
-	public userDAO getuserDAO() {
+	public UserDAO getuserDAO() {
 		System.out.println("---userDAO impl---");
-		return new userDAOImpl();
+		return new UserDAOImpl();
 	}
 
 	@Bean(name = "cartDAO")
-	public cartDAO getcartDAO() {
+	public CartDAO getcartDAO() {
 		System.out.println("---cartDAO impl---");
-		return new cartDAOImpl();
+		return new CartDAOImpl();
 	}
 
 	@Bean(name = "orderDAO")
-	public orderDAO getorderDAO() {
+	public OrderDAO getorderDAO() {
 		System.out.println("---orderDAO impl---");
-		return new orderDAOImpl();
+		return new OrderDAOImpl();
 	}
 	@Bean(name = "transactionManager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
