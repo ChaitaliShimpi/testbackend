@@ -19,6 +19,28 @@ public class Order {
 	String shippingAddress;
 	String transactionType;
 	String deliveryStatus;
+	int pincode;
+	String state;
+	String address;
+	
+	public int getPincode() {
+		return pincode;
+	}
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	public int getOrderId() {
 		return orderId;
 	}
@@ -61,14 +83,18 @@ public class Order {
 	public void setDeliveryStatus(String deliveryStatus) {
 		this.deliveryStatus = deliveryStatus;
 	}
-	@Override
-	public String toString() {
-		return "order [orderId=" + orderId + ", orderDate=" + orderDate + ", username=" + username + ", totalAmount="
-				+ totalAmount + ", shippingAddress=" + shippingAddress + ", transactionType=" + transactionType
-				+ ", deliveryStatus=" + deliveryStatus + "]";
-	}
+	
 	public Order() {
 		super();
 	}
+	
+	@Override
+	public String toString() {
+		return "Order [orderId=" + orderId + ", orderDate=" + orderDate + ", username=" + username + ", totalAmount="
+				+ totalAmount + ", shippingAddress=" + shippingAddress + ", transactionType=" + transactionType
+				+ ", deliveryStatus=" + deliveryStatus + ", pincode=" + pincode + ", state=" + state + ", address="
+				+ address + "]";
+	}
+	
 	
 }
