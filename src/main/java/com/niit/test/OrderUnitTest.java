@@ -28,10 +28,12 @@ public class OrderUnitTest {
 		o.setOrderId(1);
 		o.setDeliveryStatus("Pending");
 		o.setOrderDate(new Date());
-		o.setShippingAddress("dadar");
+		o.setShippingAddress("malad");
 		o.setTotalAmount(1000);
 		o.setTransactionType("cod");
 		o.setUsername("chaitali2");
+		o.setState("maharashtra");
+		o.setPincode(400092);
 		assertTrue("Problem in order Insertion", orderDAO.addOrder(o));
 	}
 }

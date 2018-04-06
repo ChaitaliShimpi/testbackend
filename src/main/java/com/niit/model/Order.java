@@ -21,7 +21,6 @@ public class Order {
 	String deliveryStatus;
 	int pincode;
 	String state;
-	String address;
 	
 	public int getPincode() {
 		return pincode;
@@ -35,12 +34,7 @@ public class Order {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
+	
 	public int getOrderId() {
 		return orderId;
 	}
@@ -92,8 +86,7 @@ public class Order {
 	public String toString() {
 		return "Order [orderId=" + orderId + ", orderDate=" + orderDate + ", username=" + username + ", totalAmount="
 				+ totalAmount + ", shippingAddress=" + shippingAddress + ", transactionType=" + transactionType
-				+ ", deliveryStatus=" + deliveryStatus + ", pincode=" + pincode + ", state=" + state + ", address="
-				+ address + "]";
+				+ ", deliveryStatus=" + deliveryStatus + ", pincode=" + pincode + ", state=" + state + "]";
 	}
 	
 	

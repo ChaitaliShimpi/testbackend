@@ -24,10 +24,10 @@ public class UserUnitTest {
 	@Test
 	public void saveUser() {
 		User user = new User();
-		user.setUsername("joshua");
-		user.setAddress("malad");
-		user.setEmail("joshua@gmail.com");
-		user.setPassword("1234");
+		user.setUsername("karvi");
+		user.setAddress("borivali");
+		user.setEmail("karvi@gmail.com");
+		user.setPassword("12345");
 		user.setPhone(12345);
 		user.setEnabled(true);
 		user.setRole("ROLE_ADMIN");
